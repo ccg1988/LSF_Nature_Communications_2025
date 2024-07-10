@@ -1,0 +1,32 @@
+function [spikes, V] = LIFmodel_MP(Ge, Gi, noise_magnitude, Erest, spike_thres)
+
+% similar to function "LIFmodel_IE"
+% this function will be called by function "F_percent_MP" and program "F_demo_MP"
+
+spikes=[]; V=[]; t=1; i=1;
+step=.0001;   % 0.1 ms duration (temporal increment for running simulation)
+noise_sigma = 0.01 ; % [V] scale of noise
+% noise_sigma = 0 ;
+C = 0.25*1e-9;          %0.25 nF (Wehr and Zador); 10 ms time constant(Cm*Rm)
+Grest = 25*1e-9;      %25 nS (Wehr and Zador)
+Ee = 0; % 0 mV (Wehr and Zador)
+Ei = -0.085;  %-85 mV (Wehr and Zador)
+V(1) = Erest;
+
+%avoid negative conductances
+Ge=Ge+noise_magnitude*randn(1, length(Ge)); %mean is 0
+Gi=Gi+noise_magnitude*randn(1, length(Gi));
+Ge(Ge<0)=0;
+Gi(Gi<0)=0;
+
+while(t<(length(Ge)-0))
+    V(t+1)=(-step*(Ge(t)*(V(t)-Ee)+Gi(t)*(V(t)-Ei)+Grest*(V(t)-Erest))/C)+V(t)+noise_sigma*randn*sqrt(step); % 
+    if V(t+1) > spike_thres 
+        spikes(i)=step*(t+1);
+        i=i+1;
+        t=t+1;
+        V(t+1)=Erest;
+    end
+    t=t+1;
+% V(end) = [];
+end
