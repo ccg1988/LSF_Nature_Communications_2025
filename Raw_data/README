@@ -2,7 +2,5 @@ Raw extracellular spiking data for reproducing Figure 1-5
 
 Due to the 25 MB limit of a single file, we cut the spiking data of M43S into two folders
 
-We did not upload the raw waveform of action potential (unrelated to this study) and membrane potential (Figure 6) due to the file size limit
 
-Figure 7 does not need experimental data and the codes are contained in three folders: Ex_In_Syn_Amplitude
 
