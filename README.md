@@ -10,4 +10,4 @@ We did not upload the raw waveform of action potential (unrelated to this study)
 
 Figure 7 does not need experimental data and the codes are contained in three folders: Membrane_potential_depolarization (Fig7a), Ex_In_Syn_Amplitude_Grid_Search (Fig7c), Scaled_membrane_potential_depolarization (Fig7d, e, f)
 
-Due to the file size limit, we did not upload the raw behavioral tracking video of Figure 8.
+Due to the file size limit, we did not upload the raw behavioral tracking video of Figure 8. We uploaded three example videos as the Supplemental Videos.
