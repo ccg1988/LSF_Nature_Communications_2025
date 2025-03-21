@@ -2,7 +2,7 @@ We have uploaded the raw spiking data (not firing rate) that could be used to re
 
 We used an online template matching method to isolate high-quality single-unit signals, therefore we don't need a further spike sorting process.
 
-Readers could also use those raw data for other analyses. We did not present all of our analyzed results since we already have 20 Figures.
+Readers could also use those raw data for other analyses. We did not present all of our analyzed results since we already have 21 Figures.
 
 *****************************
 
